@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
-<<<<<<< HEAD
 // Go to office hours to get help with this section
 export function StartAttempt(): React.JSX.Element {
     const [quizAttempts, setAttempts] = useState<number>(4);
@@ -40,8 +39,4 @@ export function StartAttempt(): React.JSX.Element {
             </Button>
         </div>
     );
-=======
-export function StartAttempt(): React.JSX.Element {
-    return <div>Start Attempt</div>;
->>>>>>> origin/task-forms
 }

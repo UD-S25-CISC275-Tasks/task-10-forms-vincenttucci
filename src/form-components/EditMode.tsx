@@ -8,19 +8,19 @@ export function EditMode(): React.JSX.Element {
     */
     const [editMode, setEditMode] = useState<boolean>(false);
     const [name, setName] = useState<string>("Your Name");
-    const [isAStudent, setIsAStudent] = useState<boolean>(true);
+    const [isStudent, setIsStudent] = useState<boolean>(true);
 
     return (
         <div>
             <h3>Edit Mode</h3>
-            <label className="editmode">
+            <label className="form-switch">
                 <input
                     type="checkbox"
                     checked={editMode}
                     onChange={(e) => {
                         setEditMode(e.target.checked);
                     }}
-                />
+                />{" "}
                 Edit Mode
             </label>
             {editMode ?
@@ -35,19 +35,18 @@ export function EditMode(): React.JSX.Element {
                     <label>
                         <input
                             type="checkbox"
-                            checked={isAStudent}
+                            checked={isStudent}
                             onChange={(e) => {
-                                setIsAStudent(e.target.checked);
+                                setIsStudent(e.target.checked);
                             }}
                         />{" "}
                         Student
                     </label>
                 </div>
             :   <p>
-                    {" "}
-                    {name} is {isAStudent ? "" : "not "} a student{" "}
+                    {name} is {isStudent ? "" : "not "}a student
                 </p>
-            }{" "}
+            }
         </div>
     );
 }
